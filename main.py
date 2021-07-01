@@ -20,11 +20,18 @@ def Lagrange(points_list):
 
 def hermite_interpolation(points_list):
     l = Lagrange(points_list)
+    dl = l.diff()
+    l = lambdify(x, l)
+    dl = lambdify(x, dl)
 
 
-f = Lagrange([(1,1), (2,2), (3,3)])
-f = lambdify(x, f)
-f.diff()
+
+
+
+
+
+
+
 
 
 
